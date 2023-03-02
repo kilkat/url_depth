@@ -28,10 +28,10 @@ def bruteforce():
                         break
                 num += 1
             except:
-                # for j in range(1, 3):
-                #     r_result = requests.get(url+ "/" + "".join(i))
+                for j in range(1, 3):
+                    r_result = requests.get(url+ "/" + "".join(i))
                 f2 = open("err_output.txt", "w")
-                f2.write(r_result + " 충돌")
+                f2.write(r_result + " 충돌 및 오류 발생")
                 f2.close()
                 pass
     else:
