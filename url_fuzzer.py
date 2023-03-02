@@ -19,11 +19,11 @@ def bruteforce():
                 for i in attempt:
                     # print(i)
                     r_result = requests.get(url+ "/" + "".join(i))
-                    r_status = r_result.status_code
+                    # r_status = r_result.status_code
                     print(r_result)
-                    print(r_status)
-                    if(r_status == 200):
-                        print("----------" + r_status + "----------")
+                    # print(r_status)
+                    if(r_result.status_code == 200):
+                        print("----------" + r_result.status_code + "----------")
                         f1 = open("find_output.txt", "a")
                         data = r_result + " 탐지됨"
                         f1.write(data)
