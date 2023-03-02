@@ -30,10 +30,10 @@ def bruteforce():
             except:
                 for j in range(1, 3):
                     r_result = requests.get(url+ "/" + "".join(i))
+                pass
                 f2 = open("err_output.txt", "w")
                 f2.write(r_result + " 충돌 및 오류 발생")
                 f2.close()
-                pass
     else:
         print("탐지에 실패했습니다.")
 
