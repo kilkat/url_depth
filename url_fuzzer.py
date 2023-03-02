@@ -22,8 +22,10 @@ def bruteforce():
                     r_status = r_result.status_code
                     print(r_result)
                     if(r_status == 200):
-                        f1 = open("find_output.txt", "w")
-                        f1.write(r_result + " 탐지됨")
+                        f1 = open("find_output.txt", "r")
+                        data = f1.read()
+                        edit_data = data + "\n" + r_result + " 탐지됨"
+                        f1.write(edit_data)
                         f1.close()
                         break
                 num += 1
