@@ -9,11 +9,11 @@ def bruteforce():
     if(r.status_code == 200):
         while True:
             print("num = " + str(num))
-            # number = "0123456789"
+            number = "0123456789"
             lowercase = "abcdefghijklmnopqrstuvwxyz"
-            # uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            # symbol = "!@#$%^&*()_+-=`~"
-            possibility = lowercase
+            uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            symbol = "!@#$%^&*()_+-=`~"
+            possibility = lowercase + uppercase + number + symbol
             attempt = product(possibility, repeat=num)
             try:
                 for i in attempt:
